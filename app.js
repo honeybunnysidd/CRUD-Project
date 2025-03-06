@@ -44,3 +44,12 @@ app.listen(3000, () => {
 app.get("/posts", (req, res) => {
   res.render("index.ejs", { postsArr });
 });
+
+app.get("/posts/new", (req, res) => {
+  res.render("new");
+});
+app.post("/posts", (req, res) => {
+  let { username, content, img } = req.body;
+  postsArr.push({ username, content,img });
+  res.redirect("/posts");
+});
