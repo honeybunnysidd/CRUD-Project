@@ -19,17 +19,28 @@
   <body>
     <form action="/posts" method="post" class="container mt-5">
       <div class="mb-3">
-        <label for="user" class="form-label">Username</label>
-        <input type="text" class="form-control" id="user" required />
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          name="username"
+          class="form-control"
+          required
+          id="username"
+        />
       </div>
 
       <div class="mb-3">
         <label for="content" class="form-label">Content</label>
-        <textarea name="content" id="content" class="form-control" required></textarea>
+        <textarea
+          name="content"
+          id="content"
+          class="form-control"
+          required
+        ></textarea>
       </div>
       <div class="mb-3">
         <label for="img" class="form-label">Image URL</label>
-        <input type="url" class="form-control" id="img"  required/>
+        <input type="url" class="form-control" id="img" name="img" required />
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

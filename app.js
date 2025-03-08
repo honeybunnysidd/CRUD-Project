@@ -4,6 +4,7 @@ const app = express();
 
 //express understand the client's data for all type of Request
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //Set view engine to ejs
 app.set("view engine", "ejs");
@@ -42,7 +43,7 @@ app.listen(3000, () => {
 });
 
 app.get("/posts", (req, res) => {
-  res.render("index.ejs", { postsArr });
+  res.render("index", { postsArr });
 });
 
 app.get("/posts/new", (req, res) => {
@@ -50,6 +51,6 @@ app.get("/posts/new", (req, res) => {
 });
 app.post("/posts", (req, res) => {
   let { username, content, img } = req.body;
-  postsArr.push({ username, content,img });
+  postsArr.push({ username, content, img });
   res.redirect("/posts");
 });
