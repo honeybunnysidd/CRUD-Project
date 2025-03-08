@@ -26,12 +26,16 @@
       <div class="card-body">
         <h5 class="card-title">@<%= post.username %></h5>
         <p class="card-text"><%= post.content %></p>
-        <a href="#" class="btn btn-danger me-5 ms-2">Delete</a>
-        <a
-          href="http://localhost:3000/posts/<%= post.id  %>"
-          class="btn btn-success"
-          >See details</a
-        >
+
+        <div class="d-flex justify-content-between m-2">
+          <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+              <button class="btn btn-danger">Delete</button>
+          </form>
+          <a href="http://localhost:3000/posts/<%= post.id %>" class="btn btn-success">
+              See details
+          </a>
+      </div>
+
       </div>
     </div>
 

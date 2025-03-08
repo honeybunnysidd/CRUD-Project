@@ -84,6 +84,12 @@ app.get("/posts/:id/edit", (req, res) => {
   res.render("edit", { post });
 });
 
+//Destroy the post
+app.delete("/posts/:id", (req, res) => {
+  let { id } = req.params;
+  postsArr = postsArr.filter((p) => p.id !== id);
+  res.redirect("/posts");
+});
 app.listen(3000, () => {
   console.log(`server is listening on 3000`);
 });
