@@ -92,7 +92,7 @@ app.delete("/posts/:id", (req, res) => {
 });
 
 //Route all api
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.redirect("/posts");
 });
 app.listen(3000, () => {
