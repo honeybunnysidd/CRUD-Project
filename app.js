@@ -90,6 +90,11 @@ app.delete("/posts/:id", (req, res) => {
   postsArr = postsArr.filter((p) => p.id !== id);
   res.redirect("/posts");
 });
+
+//Route all api
+app.get("*", (req, res) => {
+  res.redirect("/posts");
+});
 app.listen(3000, () => {
   console.log(`server is listening on 3000`);
 });
