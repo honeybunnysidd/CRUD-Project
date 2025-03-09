@@ -1,8 +1,29 @@
 {
-  "dependencies": {
+  "name": "crud-project",
+  "version": "1.0.0",
+  "main": "app.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "devDependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "method-override": "^3.0.0",
     "uuid": "^11.1.0"
-  }
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honeybunnysidd/CRUD-Project.git"
+  },
+  "author": "Siddhartha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/honeybunnysidd/CRUD-Project/issues"
+  },
+  "homepage": "https://github.com/honeybunnysidd/CRUD-Project#readme",
+  "description": ""
 }
