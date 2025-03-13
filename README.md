@@ -6,6 +6,7 @@ Follow these steps to set up and run the project locally:
 
     ```bash
     git clone https://github.com/honeybunnysidd/CRUD-Project.git
+     cd crud-project
     ```
 
 2.  **Install Dependencies:**
