@@ -1,4 +1,9 @@
-h5{
-    color: red !important;
-    font-style: italic;
+h5 {
+  color: red !important;
+  font-style: italic;
+}
+
+.mainDiv {
+  display: flex !important;
+  flex-wrap: wrap;
 }

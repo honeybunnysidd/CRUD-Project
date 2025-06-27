@@ -17,32 +17,38 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="container-fluid">
     <h1 class="m-3">Our Posts</h1>
-    <% for(post of postsArr){ %>
+    <div class="mainDiv">
+      <% for(post of postsArr){ %>
 
-    <div class="card mb-3 m-3" style="width: 18rem">
-      <img class="card-img-top" src="<%= post.img %>" alt="Card image cap" />
-      <div class="card-body">
-        <h5 class="card-title">@<%= post.username %></h5>
-        <p class="card-text"><%= post.content %></p>
+      <div class="card mb-3 m-3" style="width: 18rem">
+        <img class="card-img-top" src="<%= post.img %>" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">@<%= post.username %></h5>
+          <p class="card-text"><%= post.content %></p>
 
-        <div class="d-flex justify-content-between m-2">
-          <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+          <div class="d-flex justify-content-between m-2">
+            <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
               <button class="btn btn-danger">Delete</button>
-          </form>
-          <a href="http://localhost:3000/posts/<%= post.id %>" class="btn btn-success">
+            </form>
+            <a
+              href="http://localhost:3000/posts/<%= post.id %>"
+              class="btn btn-success"
+            >
               See details
-          </a>
+            </a>
+          </div>
+        </div>
       </div>
 
-      </div>
+      <%} %>
     </div>
 
-    <%} %>
-
-    <a href="http://localhost:3000/posts/new"
-      ><button class="btn btn-primary ms-5 mb-3 mt-3">Create New Post</button>
-    </a>
+    <div class="text-center">
+      <a href="http://localhost:3000/posts/new"
+        ><button class="btn btn-primary ms-5 mb-3 mt-3">Create New Post</button>
+      </a>
+    </div>
   </body>
 </html>
