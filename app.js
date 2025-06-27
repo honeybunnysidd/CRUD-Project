@@ -1,3 +1,5 @@
+const port = process.env.PORT || 3000;
+
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -95,6 +97,6 @@ app.delete("/posts/:id", (req, res) => {
 app.get("/", (req, res) => {
   res.redirect("/posts");
 });
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`server is listening on 3000`);
 });
