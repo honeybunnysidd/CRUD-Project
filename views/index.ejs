@@ -32,10 +32,7 @@
             <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
               <button class="btn btn-danger">Delete</button>
             </form>
-            <a
-              href="http://localhost:3000/posts/<%= post.id %>"
-              class="btn btn-success"
-            >
+            <a href="/posts/<%= post.id %>" class="btn btn-success">
               See details
             </a>
           </div>
@@ -46,7 +43,7 @@
     </div>
 
     <div class="text-center">
-      <a href="http://localhost:3000/posts/new"
+      <a href="/posts/new"
         ><button class="btn btn-primary ms-5 mb-3 mt-3">Create New Post</button>
       </a>
     </div>
